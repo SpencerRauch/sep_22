@@ -39,6 +39,8 @@ name = list[1]
 #elements accessed by index
 list[3] = 7
 # print(list)
+list.append(200)
+print(list)
 first_three = list[0:3]
 last_number = list[-2:]
 # print(first_three)
