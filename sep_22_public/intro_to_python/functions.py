@@ -4,7 +4,6 @@
 #SAVE SPACE
 #REPEATABLE CODE
 
-from sys import base_prefix
 
 
 def function_name(parameter_one, parameter_two):
