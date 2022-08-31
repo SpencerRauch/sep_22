@@ -14,7 +14,9 @@ while(bob.health > 0 and bulbasaur.health > 0):
     elif response == '2':
         bob.heal()
     else:
-        print("Please pick a valid option")
+        while(response != '1' and response != '2'):
+            print("Please pick a valid option")
+            response = input("You're bob, will you attack or defend? \n 1) attack \n 2)heal \n")
     
     roll = random.randint(1,3)
     if roll == 1:
