@@ -29,10 +29,12 @@ class Cat():
     is_cute = True
     #constructor
     def __init__(self, cat_data, fav_toy_type, fav_toy_color, fav_toy_action):
+        #setting up instance attributes
         self.name = cat_data['name']
         self.color = cat_data['color']
         self.age = cat_data['age']
         self.breed = cat_data['breed']
+        #associating with Toy class
         self.fav_toy = Toy(fav_toy_type,fav_toy_color,fav_toy_action)
         Cat.all_cats.append(self)
 
