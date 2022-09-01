@@ -14,22 +14,41 @@ def success():
 
 @app.route('/say/<word>/<int:number>')
 #path variables go in <>
-#be default path variables are strings
+#by default path variables are strings
 def say_word(word, number):
     #remember to bring your path variables in as parameters
     print(f"my word is {word}")
     print(number)
-    return word * number
+    return render_template("say.html", word=word, number=number)
 
 @app.route("/template")
 def template():
-    return render_template("index.html")
+    new_variable = "This is a test string "
+    return render_template("index.html", djkdjdkdk = new_variable)
+    #                                   name_on_template = value_we_want
 
 @app.route("/route_to_page_2")
 def page2():
     return render_template("page2.html")
 
+@app.route("/iterate")
+def iterate():
+    cats = [
+        {
+            'name': 'Garfield',
+            'color': 'orange'
+        },
+        {
+            'name': 'Scar',
+            'color': 'dark brown'
+        },
+        {
+            'name': 'Felix',
+            'color': 'black'
+        },
+    ]
 
+    return render_template("cats.html", cats=cats, h=100, w=1000, color='pink')
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
     app.run(debug=True)    # Run the app in debug mode.

@@ -15,3 +15,13 @@ this command creates a new virtual environment and installs flask to it
 exit
 leaves virtual environmnt
 """
+
+"""
+jinja2
+
+is not python, but its super similar to python
+{{ some variable }}
+{% some expression %}
+
+
+"""
