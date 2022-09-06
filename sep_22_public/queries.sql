@@ -19,7 +19,7 @@ VALUES (1,1);
 -- SELECT (what to grab) FROM (table to grab from)
 
 SELECT * FROM cars;
-SELECT name FROM users;
+SELECT * FROM users;
 SELECT name as user_name FROM users WHERE id > 2 ORDER BY name DESC;
 SELECT * FROM licenses;
 -- UPDATE
@@ -33,3 +33,10 @@ UPDATE licenses SET number = '123435', state = 'WA' WHERE id = 1;
 
 DELETE FROM users WHERE id = 2;
 SELECT *, HOUR(updated_at) as hour_updated FROM cars;
+-- 
+SELECT *, COUNT(id) FROM users GROUP BY name;
+-- JOIN table_to_add ON fk = pk;
+SELECT * FROM licenses JOIN users ON users.id = licenses.user_id;
+-- left join will display the unmatching data from the left side
+
+SELECT * FROM dealerships JOIN dealerships_have_cars ON dealerships.id = dealerships_id JOIN cars ON cars_id = cars.id;
